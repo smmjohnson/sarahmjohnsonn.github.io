@@ -1,1 +1,544 @@
-/* css styles */
+:root {
+    --cmain: #FCFFFC;
+    --c1: #231B1A;
+    --c2: #4E6E5D;
+    --c3: #E1F0C4;
+    --c4:#A690A4;
+    --c5: #9bdbe1;
+    --c6: #7d3d17;
+    --c7: #ffbc00;
+    --c8: #d5dfde;
+    --c9: #271E17;
+
+    --ccheckers: var(--c6);
+
+    --chighlight: red;
+
+    --cset11: #70c6c9;
+    --cset12: #feac00;
+    --cset13: #74801e;
+    --cset14: #38686A;
+    --cset15: #853830;
+    --cset16: #38686A;
+
+
+  }
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+  display: flex;
+  background-color: var(--cmain);
+  justify-content: center;
+  align-items: center; /* Center vertically */
+}
+
+main{
+  display: flex;
+  background-color: var(--c7);
+  justify-content: center;
+  align-items: center; /* Center vertically */
+}
+
+
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Links */
+a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:active {
+    text-decoration: underline;
+  }
+/* / Links */
+  
+h1{
+    color: var(--c1);
+    font-family: 'PT Sans', sans-serif; 
+    letter-spacing: 0.08em;
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+p{
+    /* background-color: var(--c4); */
+    color: var(--c4);
+}
+
+#header{
+    padding: 0.5rem 1rem;
+    /* background-color: var(--c3); */
+    display: flex;
+    list-style: none;
+
+}
+#header-name{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: var(--c4); */
+}
+
+nav{
+    background-color: var(--c3);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+
+
+#nav-list ul{
+    list-style: none;
+    display: flex;
+    /* color: var(--c3); */
+}
+
+
+.nav-links a{
+    color: var(--c2);
+    padding: 0.75rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--c2);
+    color: #ecf0f1;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    text-decoration: underline;
+  }
+  
+/* / Footer */
+/* gallery */
+.gallery-container{
+justify-content: center;
+
+display: flex;
+align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 85vw;
+
+}
+
+/* 3 columns */
+.column {
+  flex: 32%;
+  max-width: 32%;
+  justify-content: center;
+}
+
+.column img {
+  padding: 1rem 0;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* / Gallery */
+
+/* Misc img buttons */
+/* Button Container */
+.button-container {
+
+    display: grid;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 items side by side */
+  }
+  
+  /* Buttons */
+  .button {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: #fff; /* Overlay text color */
+  }
+  
+  .button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* Overlay Text */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+  }
+  
+  /* Hover Effects */
+  .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 1024px) {
+    .button-container {
+      grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .button-container {
+      grid-template-columns: 1fr; /* Stack vertically */
+    }
+  }
+
+  /* Misc img buttons */
+
+  /* Projects */
+  .js-viz-container {
+    text-align: center;
+    border: 2px solid var(--c4);
+    padding: 20px;
+    border-radius: 0.3rem;
+    background-color: var(--C8);
+    width: fit-content;
+  }
+  
+  #sketch-container {
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  
+  /* / Projects */
+
+  /* carousel 2 */
+
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  background-color: var(--c4);
+  width: 85vw;
+  height: 50vw;
+  position: relative;
+}
+
+@media screen and (max-width: 500px){
+
+  body{
+    background-color: var(--c5);
+  }
+}
+
+.carousel > ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 300ms opacity ease-in-out;
+  transition-delay: 300ms;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.carousel-button {
+  border: solid var(--c2);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover, 
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel-button:focus {
+  outline: 1px solid var(--c4);
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+.carousel-button.next {
+  right: 1rem;
+}
+
+
+.next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.prev {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+  /* carousel 2 */
+
+  /* styles */
+  
+  /* checkered divider */
+  .divider-checkered {
+    height: 1vw; /* Adjust for multiple rows */
+    background-image: 
+      linear-gradient(45deg, var(--ccheckers) 25%, transparent 25%, transparent 75%, var(--ccheckers) 75%), 
+      linear-gradient(45deg, var(--ccheckers) 25%, transparent 25%, transparent 75%, var(--ccheckers) 75%);
+    background-size: 1vw 1vw;
+    background-position: 0 0, .5vw .5vw;
+    background-repeat: repeat;
+  }
+
+  .divider-wave2 {
+    /* background-color: var(--c3); */
+    width: 100%;
+    height: 1.5vw;
+    background-image: 
+      radial-gradient(circle, var(--c5) 30%, transparent 10%),/* Inner white circle */
+      radial-gradient(circle, var(--c3) 50%, transparent 50%), 
+      radial-gradient(circle, var(--c2) 60%, transparent 50%),
+      radial-gradient(circle, var(--c4) 70%, transparent 50%)
+
+      ;
+    background-size: 3vw 2vw, 10vw 5vw;
+    background-position: 0 0, 0 1vw;
+    background-repeat: repeat-x;
+  }
+
+.divider-wave {
+  width: 100%;
+  height: 40vw;
+  background-image:  
+    radial-gradient(circle, var(--c3) 50%, transparent 50%)
+    ;
+  background-size: 20vw 4vw;
+  background-position: -2vw 0;
+  background-repeat: repeat-x;
+}
+
+
+
+
+  .divider-stripes1 {height: 2vw; /* Adjust thickness of the divider */
+    background: repeating-linear-gradient(
+      90deg, /* Angle of the stripes */
+      var(--cset11), /* 1st color */
+      var(--cset11) .25vw,
+      var(--cset12) .25vw, /* 2nd color */
+      var(--cset12) .5vw,
+      var(--cset13) .5vw, /* 3rd color */
+      var(--cset13) 1vw, 
+      var(--cset14) 1vw, /* 4th color */
+      var(--cset14) 1.25vw,
+      var(--cset15) 1.25vw, /* 5th color */
+      var(--cset15) 1.5vw,
+      var(--cset16) 1.5vw, /* 6th color */
+      var(--cset16) 1.75vw
+    );
+  }
+
+
+  .divider-stripes {
+    opacity: 70%;
+    height: 2vw; /* Adjust thickness of the divider */
+    background: repeating-linear-gradient(
+      90deg, /* Angle of the stripes */
+      var(--cset12), /* 1st color */
+      transparent .5vw,
+      transparent .5vw, /* 2nd color */
+      transparent 1vw,
+      var(--cset13) 1vw, /* 3rd color */
+      var(--cset13) 1.5vw, 
+      transparent 1.5vw, 
+      transparent 1.75vw, 
+      var(--cset14) 1.75vw, /* 4th color */
+      var(--cset14) 2vw
+    );
+  }
+  .divider-solid {
+    height: .5vw;
+    background-color: var(--cset13);
+    opacity: 60%;
+  }
+
+  .divider-diamond {
+    width: 100%;
+    height: 100vh; /* Adjust based on your layout */
+    background-image: 
+      linear-gradient(45deg, var(--c5) 25%, transparent 25%, transparent 50%, var(--c3) 50%, var(--c4) 75%, transparent 75%, transparent 100%),
+      linear-gradient(-45deg, var(--c7) 25%, transparent 25%, transparent 50%, var(--c2) 50%, blue 75%, transparent 75%, transparent 100%);
+    background-size: 1.5vw 1.5vw; /* Size of each diamond */
+    background-repeat: repeat-x; /* Repeat horizontally */
+    background-position: 0 0, 1.5vw 1.5vw; /* Offset to form diamonds */
+  }
+
+  .shape-section {
+    background: #222;
+    border-bottom: 2px solid #555;
+    border-top: 2px solid #555;
+    margin-top: 30px;
+    padding: 40px 0;
+  }
+  .diamond-shape {
+    background: #fff;
+    height: 60px;
+    text-align: center;
+    transform:rotate(45deg);
+    width:60px;
+  }
+
+  .diamond-narrow {
+    width: 0;
+    height: 0;
+    border: .5vw solid transparent;
+    border-bottom: .7vw solid green;
+    position: relative;
+    top: -.5vw;
+    transform: rotate(90deg);
+  }
+
+  .diamond-narrow:after {
+    content: '';
+    position: absolute;
+    left: -.5vw;
+    top: .7vw;
+    width: 0;
+    height: 0;
+    border: .5vw solid transparent;
+    border-top: .7vw solid pink;
+
+    background: 
+      linear-gradient(45deg, transparent 25%, green 25%, green 50%, transparent 50%, transparent 75%, pink 75%, pink 100%) 
+      repeat-x;  /* Repeating the diamonds horizontally */
+    background-size: 40px 40px; /* Adjust size of the diamond pattern */
+  }
+
+
+  .diamond-divider {
+    position: relative;
+    height: 50px;  /* Adjust based on your needs */
+    background-color: white;
+  }
+  
+  .diamond-divider::after {
+    position: absolute;
+    left: -.5vw;
+    top: .7vw;
+    width: 0;
+    height: 0;
+    border: .5vw solid transparent;
+    border-top: .7vw solid pink;
+
+
+    background: 
+      linear-gradient(45deg, transparent 25%, green 25%, green 50%, transparent 50%, transparent 75%, pink 75%, pink 100%) 
+      repeat-x;  /* Repeating the diamonds horizontally */
+    background-size: 20vw 20vw; /* Adjust size of the diamond pattern */
+  }
+  
+  
+/* styles */

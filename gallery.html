@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .palette {
+            display: flex;
+            justify-content: space-around;
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+    
+    
+    
+    
+    <title>Misc.</title>
+</head>
+
+<body>
+    <div id="page">
+        <!-- <div id="palette" class="palette"></div> -->
+
+    <script>
+        // Fetch the palette from the JSON file
+        fetch("palette.json")
+            .then(response => response.json())
+            .then(data => {
+                const paletteDiv = document.getElementById("palette");
+                data.forEach(color => {
+                    const colorBox = document.createElement("div");
+                    colorBox.classList.add("color-box");
+                    colorBox.style.backgroundColor = color.hex;
+                    colorBox.textContent = color.name;
+                    paletteDiv.appendChild(colorBox);
+                });
+            })
+            .catch(err => console.error("Error loading palette:", err));
+    </script>
+
+    <script>
+                document.addEventListener('DOMContentLoaded', () => {
+            const carouselImages = document.getElementById('carousel-images');
+            const images = carouselImages.querySelectorAll('img');
+            const totalImages = images.length;
+            let currentIndex = 0;
+            const intervalTime = 3000; // Change image every 3 seconds
+
+            const updateCarousel = () => {
+                const offset = -currentIndex * 100; // Shift to the correct image
+                carouselImages.style.transform = `translateX(${offset}%)`;
+            };
+
+            const showNextImage = () => {
+                currentIndex = (currentIndex + 1) % totalImages;
+                updateCarousel();
+            };
+
+            const showPrevImage = () => {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                updateCarousel();
+            };
+
+            // Auto-cycle through images
+            let autoCycle = setInterval(showNextImage, intervalTime);
+
+            // Manual navigation
+            document.getElementById('next').addEventListener('click', () => {
+                showNextImage();
+                resetAutoCycle();
+            });
+
+            document.getElementById('prev').addEventListener('click', () => {
+                showPrevImage();
+                resetAutoCycle();
+            });
+
+            // Reset the auto-cycle timer when manually navigating
+            const resetAutoCycle = () => {
+                clearInterval(autoCycle);
+                autoCycle = setInterval(showNextImage, intervalTime);
+            };
+
+            // Ensure the first image is visible on load
+            updateCarousel();
+        });
+    </script>
+
+        <div id="header">
+            <div id="header-name">
+                <h1>Sarah Johnson</h1>
+            </div>
+
+            <!-- #site-navigation -->
+            <nav id="site-navigation" class="main-navigation">
+                <div id="nav-list" class="nav-links">
+                    <ul>
+                        <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-114183"><a href="/main.html">Home</a></li>
+                        <li id="menu-item-113" class="nav-option"><a href="">Home</a></li>
+                        <li id="menu-item-114" class="nav-option"><a href="/misc.html" aria-current="page">Misc.</a></li>
+                    </ul></div>							</nav>
+            <!-- #site-navigation -->
+
+
+
+        </div>
+<div class="main">
+
+    <div class="carousel">
+        <div class="carousel-images" id="carousel-images">
+    
+            <img src="img/R0001375.jpeg" alt="Image 1">
+            <img src="img/R0001380.jpeg" alt="Image 2">
+            <img src="img/R0000027.JPG" alt="Image 3">
+        </div>
+        <div class="carousel-buttons">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
+    </div>
+
+
+    <div class="gallery-container">
+        <div class="gallery">
+
+            <div class="row">
+                <div class="column">
+                    <img src="img/R0000016.JPG" alt="">
+                    <img src="img/R0000027.JPG" alt="">
+                    <img src="img/R0000894.JPG" alt="">
+                    <img src="img/R0000040.JPG", alt="">
+                    <img src="img/R0000052.JPG" alt="">
+                </div>
+                <div class="column">
+                    <img src="img/R0000065.JPG" alt="">
+                    <img src="img/R0000876.JPG" alt="">
+                    <img src="img/R0000069.JPG" alt="">
+                    <img src="img/R0001375.jpeg" alt="">
+                    <img src="img/R0000918.JPG" alt="">
+                </div>
+                <div class="column">
+                    <img src="img/R0000066.JPG" alt="">
+                    <img src="img/R0000886.JPG" alt="">
+                    <img src="img/R0000928.JPG" alt="">
+                    <img src="img/R0000969.JPG" alt="">
+                </div>
+                <div class="column">
+
+                </div>
+            </div>
+
+            <!-- <img src="img/R0000016.JPG" alt="">
+            <img src="img/R0000027.JPG" alt="">
+            <img src="img/R0000894.JPG" alt="">
+            <img src="img/R0000040.JPG" alt="">
+            <img src="img/R0000052.JPG" alt="">
+            <img src="img/R0000065.JPG" alt="">
+            <img src="img/R0000886.JPG" alt="">
+            <img src="img/R0000066.JPG" alt="">
+            <img src="img/R0000069.JPG" alt="">
+            <img src="img/R0000872.JPG" alt="">
+            <img src="img/R0000876.JPG" alt="">
+            <img src="img/R0000918.JPG" alt="">
+            <img src="img/R0000928.JPG" alt="">
+            <img src="img/R0000969.JPG" alt=""> -->
+          </div>
+    </div>
+
+</div>
+
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque aliquid dolores repellat, veritatis soluta accusantium dolor obcaecati sunt impedit quas, voluptates vel. Architecto iusto, voluptatibus veniam magnam consequuntur ratione maiores.
+        </p>
+
+    </div>
+
+</body>
+</html>
