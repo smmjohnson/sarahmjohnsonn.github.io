@@ -31,6 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Inject secret into password file
+        run: |
+          echo "PASSWORD=${{ secrets.PASSWORD }}" > path/to/your/password/file.txt
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
