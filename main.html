@@ -3,6 +3,10 @@
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quando&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +17,41 @@
     <div id="page">
         <div id="header">
             <div id="header-name">
-                <h1>Sarah Johnson</h1>
+                <!-- <h1>Sarah Johnson</h1> -->
+                <!-- <h1 style="font-family: Montserrat;">Sarah M. Johnson: Montserrat</h1> -->
+                <!-- <h1 style="font-family: Calistoga;">Sarah M. Johnson: Calistoga</h1> -->
+                <!-- <h1 style="font-family: Quando;">Sarah M. Johnson: Quando</h1> -->
+                <h1>
+                    <a href="main.html">Sarah M. Johnson</a>
+                </h1>
+                <!-- <h1 style="font-family: Poppins;">Sarah M. Johnson: Poppins</h1> -->
+
             </div>
 
             <!-- #site-navigation -->
             <nav id="site-navigation" class="main-navigation">
                 <div id="nav-list" class="nav-links">
                     <ul>
-                        <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-114183"><a href="/main.html">Home</a></li>
-                        <li id="menu-item-113" class="nav-option"><a href="">Home</a></li>
-                        <li id="menu-item-114" class="nav-option"><a href="/misc.html" aria-current="page">Misc.</a></li>
-                        <li id="menu-item-115" class="nav-option"><a href="projects.html" aria-current="page">Proejcts</a></li>
-                    </ul></div>							</nav>
+                        <li id="menu-item-113" class="nav-option"><a href="about.html">About</a></li>
+                        <li id="menu-item-115" class="nav-option"><a href="projects.html" aria-current="page">Projects</a></li>
+                        <!-- <li id="menu-item-114" class="nav-option"><a href="misc.html" aria-current="page"> -->
+                            
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-link">Misc.</a>
+                            <ul class="dropdown-menu">
+                                
+                                <li><a href="gallery.html">Photos</a></li>
+                                <li><a href="art.html">Art</a></li>
+                                <li><a href="recipes.html">Recipes</a></li>
+
+                            </ul>
+                            </li>
+
+                        </a></li>
+                        <li id="menu-item-114" class="nav-option"><a href="contact.html" aria-current="page">Contact</a></li>
+
+                    </ul></div></nav>
+
             <!-- #site-navigation -->
 
 

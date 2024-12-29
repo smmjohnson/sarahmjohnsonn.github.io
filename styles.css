@@ -28,6 +28,7 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  font-family: "Nunito", serif;
 }
 
 
@@ -37,6 +38,8 @@ body{
   background-color: var(--cmain);
   justify-content: center;
   align-items: center; /* Center vertically */
+
+  font-family: "Nunito", serif;
 }
 
 main{
@@ -55,26 +58,23 @@ main{
 
 
 /* Links */
-a:link {
-    text-decoration: none;
-  }
-  a:visited {
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  a:active {
-    text-decoration: underline;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
 /* / Links */
-  
+
 h1{
     color: var(--c1);
-    font-family: 'PT Sans', sans-serif; 
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     font-size: clamp(2rem, 3vw, 3rem);
 }
+
 
 p{
     /* background-color: var(--c4); */
@@ -86,38 +86,95 @@ p{
     /* background-color: var(--c3); */
     display: flex;
     list-style: none;
-
-}
-#header-name{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* background-color: var(--c4); */
 }
 
+/* site navigation */
 nav{
     background-color: var(--c3);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     list-style: none;
     display: flex;
     align-items: center;
 }
 
+/* Basic Navigation Styles */
+#nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
 
+#nav-list li {
+  position: relative; /* Needed for positioning the dropdown */
+  margin-right: 20px; /* Space between menu items */
+}
+
+#nav-list a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+}
+
+#nav-list > ul {
+  display: flex;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent item */
+  left: 0;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: adds shadow */
+}
+
+.dropdown-menu li {
+  width: 200px; /* Adjust as needed */
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Show the dropdown when hovering over the parent */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Optional: Style for hovering over dropdown items */
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
 
 #nav-list ul{
-    list-style: none;
-    display: flex;
-    /* color: var(--c3); */
+  list-style: none;
+  /* display: flex; */
+  /* color: var(--c3); */
 }
 
 
 .nav-links a{
-    color: var(--c2);
-    padding: 0.75rem;
+  color: var(--c2);
+  padding: 0.75rem;
 }
+/* site navigation */
+
+
+
+
 
 /* Footer */
 footer {
-    background-color: var(--c2);
+    background-color: var(--cset11);
     color: #ecf0f1;
     padding: 20px 0;
     text-align: center;
@@ -160,7 +217,8 @@ footer {
 /* gallery */
 .gallery-container{
 justify-content: center;
-
+padding: 0 0 0 1rem;
+background-color: var(--cset13);
 display: flex;
 align-items: center;
 }
@@ -290,13 +348,15 @@ align-items: center;
 
 
 .carousel-container {
+  background-color: var(--cset15);
+  padding: 1rem 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .carousel {
-  background-color: var(--c4);
+  /* background-color: var(--c4); */
   width: 85vw;
   height: 50vw;
   position: relative;
@@ -540,5 +600,22 @@ align-items: center;
     background-size: 20vw 20vw; /* Adjust size of the diamond pattern */
   }
   
+
+  /* fonts */
+  .calistoga-regular {
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .quando-regular {
+    font-family: "Quando", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+  
+  /*  */
   
 /* styles */
