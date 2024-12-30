@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
-<script src="carousel.js" defer></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quando&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quando&family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- javascript for img carousel -->
+    <script src="carousel.js" defer></script>
+
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <style>
         .palette {
             display: flex;
@@ -27,21 +39,18 @@
         }
     </style>
     
-    
-    
-    
     <title>Gallery</title>
 </head>
 
 <body>
     <div id="page">
+        
         <!-- <div id="palette" class="palette"></div> -->
 
         <div id="header">
             <h1>
                 <a href="main.html">Sarah M. Johnson</a>
             </h1>
-
             <!-- #site-navigation -->
             <nav id="site-navigation" class="main-navigation">
                 <div id="nav-list" class="nav-links">
@@ -61,12 +70,11 @@
                     </ul></div></nav>
             <!-- #site-navigation -->
 
-
-
         </div>
 
 <div class="main">
-    <!-- <h2>the wild west</h2> -->
+    
+<div class="divider-checkered"></div>
         <div class="carousel-container" aria-label="Photo Highlights">
             <div class="carousel" data-carousel>
                 <div class="carousel-button prev" data-carousel-button="prev"></div>
@@ -87,6 +95,9 @@
                     <li class="slide">
                         <img src="img/R0001472.JPG" alt="">
                     </li>
+                    <li class="slide">
+                        <img src="img/R0001285.JPG" alt="">
+                    </li>
                 </ul>
             </div>
 
@@ -104,7 +115,9 @@
         <div class="gallery">
             <div class="row">
                 <div class="column">
+                    <img src="img/R0001527.JPG" alt="">
                     <img src="img/R0000016.JPG" alt="">
+                    <img src="img/R0001839.JPG" alt="">
                     <img src="img/R0000027.JPG" alt="">
                     <img src="img/R0000894.JPG" alt="">
                     <img src="img/R0000040.JPG", alt="">
@@ -116,12 +129,20 @@
                     <img src="img/R0000069.JPG" alt="">
                     <img src="img/R0001375.jpeg" alt="">
                     <img src="img/R0000918.JPG" alt="">
+                    <img src="img/R0001285.JPG" alt="">
+                    <img src="img/R0001704.JPG" alt="">
+                    <img src="img/R0001535.JPG" alt="">
+
                 </div>
                 <div class="column">
                     <img src="img/R0000066.JPG" alt="">
                     <img src="img/R0000886.JPG" alt="">
                     <img src="img/R0000928.JPG" alt="">
                     <img src="img/R0000969.JPG" alt="">
+                    <img src="img/R0001400.JPG" alt="">
+                    <img src="img/R0001380.jpeg" alt="">
+                    <img src="img/R0001516.JPG" alt="">
+
                 </div>
                 <div class="column">
 
@@ -130,19 +151,16 @@
           </div>
     </div>
 
+    <div class="divider-checkered"></div>
+
 
 <footer>
     <div class="footer-container">
       <p>&copy; 2024 Sarah Johnson</p>
-      <ul class="footer-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    </ul>
       <div class="social-media">
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/yourusername/" target="_blank">LinkedIn</a>
-      </div>
+        <a href="www.linkedin.com/in/sarahmjohnsonn/" class="fa fa-linkedin"></a>
+    </div>
     </div>
   </footer>
 

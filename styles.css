@@ -9,6 +9,7 @@
     --c7: #ffbc00;
     --c8: #d5dfde;
     --c9: #271E17;
+    --c10: #f7f7f7;
 
     --ccheckers: var(--c6);
 
@@ -21,6 +22,14 @@
     --cset15: #853830;
     --cset16: #38686A;
 
+    /* Color Set 3 */
+    --cset31: #9DBF9E;
+    --cset32: #D0D6B5;
+    --cset33: #F9B5AC;
+    --cset34: #EE7674;
+    --cset35: #987284;
+    --cset36: #8C2155;
+
 
   }
 
@@ -28,30 +37,30 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: "Nunito", serif;
 }
 
 
 body{
   margin: 0;
   display: flex;
-  background-color: var(--cmain);
+
   justify-content: center;
   align-items: center; /* Center vertically */
 
   font-family: "Nunito", serif;
 }
 
-main{
-  display: flex;
-  background-color: var(--c7);
+.main{
+  /* display: flex; */
+  /* background-color: var(--cset31); */
   justify-content: center;
   align-items: center; /* Center vertically */
 }
 
 
 
-.page {
+.page{
+  background-color: var(--c5);
   display: flex;
   justify-content: center;
 }
@@ -70,7 +79,7 @@ a:hover {
 /* / Links */
 
 h1{
-    color: var(--c1);
+    color: var(--c9);
     letter-spacing: 0.05em;
     font-size: clamp(2rem, 3vw, 3rem);
 }
@@ -83,22 +92,30 @@ p{
 
 #header{
     padding: 0.5rem 1rem;
-    /* background-color: var(--c3); */
+    /* background-color: var(--cset34); */
     display: flex;
+    justify-content: space-between;
     list-style: none;
 }
 
 /* site navigation */
 nav{
-    background-color: var(--c3);
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     list-style: none;
     display: flex;
     align-items: center;
+
+    justify-content: right;
 }
 
 /* Basic Navigation Styles */
 #nav-list {
+  background-color: var(--cset32);
+
+  justify-items: right;
+  justify-content: right;
+  justify-self: right;
+
   list-style: none;
   padding: 0;
   margin: 0;
@@ -107,18 +124,20 @@ nav{
 
 #nav-list li {
   position: relative; /* Needed for positioning the dropdown */
-  margin-right: 20px; /* Space between menu items */
+  /* margin-right: 20px; Space between menu items */
 }
 
 #nav-list a {
   text-decoration: none;
   color: #333;
-  padding: 10px 15px;
+  padding: 0rem .5rem;
   display: block;
 }
 
 #nav-list > ul {
+
   display: flex;
+  /* justify-content: space-between; */
 }
 
 /* Dropdown Menu Styles */
@@ -174,51 +193,57 @@ nav{
 
 /* Footer */
 footer {
-    background-color: var(--cset11);
+    background-color: var(--cset32);
     color: #ecf0f1;
-    padding: 20px 0;
     text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
   }
-  
+
   .footer-container {
-    max-width: 800px;
-    margin: 0 auto;
+    /* background-color: var(--c8); */
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+    /* padding: 2rem 2rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+
   .footer-links {
     list-style: none;
     padding: 0;
     margin: 10px 0;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     gap: 15px;
   }
-  
+
   .footer-links a {
     color: #ecf0f1;
     text-decoration: none;
   }
-  
+
   .footer-links a:hover {
     text-decoration: underline;
   }
-  
+
   .social-media a {
     margin: 0 10px;
     color: #ecf0f1;
     text-decoration: none;
   }
-  
+
   .social-media a:hover {
     text-decoration: underline;
   }
-  
+
 /* / Footer */
 /* gallery */
 .gallery-container{
 justify-content: center;
-padding: 0 0 0 1rem;
-background-color: var(--cset13);
+/* padding: 0 1rem; */
+/* background-color: var(--cset13); */
 display: flex;
 align-items: center;
 }
@@ -227,7 +252,7 @@ align-items: center;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 85vw;
+  max-width: 86vw;
 
 }
 
@@ -272,7 +297,7 @@ align-items: center;
     padding: 0 1rem;
     grid-template-columns: repeat(4, 1fr); /* Default: 4 items side by side */
   }
-  
+
   /* Buttons */
   .button {
     position: relative;
@@ -283,14 +308,14 @@ align-items: center;
     text-decoration: none;
     color: #fff; /* Overlay text color */
   }
-  
+
   .button img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
   }
-  
+
   /* Overlay Text */
   .overlay {
     position: absolute;
@@ -304,20 +329,20 @@ align-items: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     pointer-events: none;
   }
-  
+
   /* Hover Effects */
   .button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
-  
+
   /* Responsive Layout */
   @media (max-width: 1024px) {
     .button-container {
       grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
     }
   }
-  
+
   @media (max-width: 768px) {
     .button-container {
       grid-template-columns: 1fr; /* Stack vertically */
@@ -335,44 +360,45 @@ align-items: center;
     background-color: var(--C8);
     width: fit-content;
   }
-  
+
   #sketch-container {
     margin-top: 20px;
     border-radius: 5px;
   }
-  
-  
+
+
   /* / Projects */
 
   /* carousel 2 */
 
 
 .carousel-container {
-  background-color: var(--cset15);
-  padding: 1rem 0rem;
+  /* background-color: var(--cset15); */
+  padding: 4.5vw;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 }
 
 .carousel {
   /* background-color: var(--c4); */
-  width: 85vw;
+  background-color: transparent;
+  /* padding: 1rem 1rem; */
   height: 50vw;
+  width: 75vw;
   position: relative;
-}
-
-@media screen and (max-width: 500px){
-
-  body{
-    background-color: var(--c5);
-  }
 }
 
 .carousel > ul{
   margin: 0;
   padding: 0;
   list-style: none;
+  height: 50vw;
+  width: 75vw;
+  justify-self: center;
 }
 
 .slide {
@@ -400,6 +426,7 @@ align-items: center;
 .carousel-button {
   border: solid var(--c2);
   border-width: 0 2px 2px 0;
+
   display: inline-block;
   padding: 3px;
 
@@ -409,23 +436,22 @@ align-items: center;
   transform: translateY(-50%);
 
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
-.carousel-button:hover, 
+.carousel-button:hover,
 .carousel-button:focus {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 .carousel-button:focus {
   outline: 1px solid var(--c4);
 }
 
 .carousel-button.prev {
-  left: 1rem;
+  left: 5%;
 }
 .carousel-button.next {
-  right: 1rem;
+  right: 5%;
 }
 
 
@@ -441,12 +467,12 @@ align-items: center;
   /* carousel 2 */
 
   /* styles */
-  
+
   /* checkered divider */
   .divider-checkered {
     height: 1vw; /* Adjust for multiple rows */
-    background-image: 
-      linear-gradient(45deg, var(--ccheckers) 25%, transparent 25%, transparent 75%, var(--ccheckers) 75%), 
+    background-image:
+      linear-gradient(45deg, var(--ccheckers) 25%, transparent 25%, transparent 75%, var(--ccheckers) 75%),
       linear-gradient(45deg, var(--ccheckers) 25%, transparent 25%, transparent 75%, var(--ccheckers) 75%);
     background-size: 1vw 1vw;
     background-position: 0 0, .5vw .5vw;
@@ -457,9 +483,9 @@ align-items: center;
     /* background-color: var(--c3); */
     width: 100%;
     height: 1.5vw;
-    background-image: 
+    background-image:
       radial-gradient(circle, var(--c5) 30%, transparent 10%),/* Inner white circle */
-      radial-gradient(circle, var(--c3) 50%, transparent 50%), 
+      radial-gradient(circle, var(--c3) 50%, transparent 50%),
       radial-gradient(circle, var(--c2) 60%, transparent 50%),
       radial-gradient(circle, var(--c4) 70%, transparent 50%)
 
@@ -472,7 +498,7 @@ align-items: center;
 .divider-wave {
   width: 100%;
   height: 40vw;
-  background-image:  
+  background-image:
     radial-gradient(circle, var(--c3) 50%, transparent 50%)
     ;
   background-size: 20vw 4vw;
@@ -491,7 +517,7 @@ align-items: center;
       var(--cset12) .25vw, /* 2nd color */
       var(--cset12) .5vw,
       var(--cset13) .5vw, /* 3rd color */
-      var(--cset13) 1vw, 
+      var(--cset13) 1vw,
       var(--cset14) 1vw, /* 4th color */
       var(--cset14) 1.25vw,
       var(--cset15) 1.25vw, /* 5th color */
@@ -512,9 +538,9 @@ align-items: center;
       transparent .5vw, /* 2nd color */
       transparent 1vw,
       var(--cset13) 1vw, /* 3rd color */
-      var(--cset13) 1.5vw, 
-      transparent 1.5vw, 
-      transparent 1.75vw, 
+      var(--cset13) 1.5vw,
+      transparent 1.5vw,
+      transparent 1.75vw,
       var(--cset14) 1.75vw, /* 4th color */
       var(--cset14) 2vw
     );
@@ -528,7 +554,7 @@ align-items: center;
   .divider-diamond {
     width: 100%;
     height: 100vh; /* Adjust based on your layout */
-    background-image: 
+    background-image:
       linear-gradient(45deg, var(--c5) 25%, transparent 25%, transparent 50%, var(--c3) 50%, var(--c4) 75%, transparent 75%, transparent 100%),
       linear-gradient(-45deg, var(--c7) 25%, transparent 25%, transparent 50%, var(--c2) 50%, blue 75%, transparent 75%, transparent 100%);
     background-size: 1.5vw 1.5vw; /* Size of each diamond */
@@ -571,8 +597,8 @@ align-items: center;
     border: .5vw solid transparent;
     border-top: .7vw solid pink;
 
-    background: 
-      linear-gradient(45deg, transparent 25%, green 25%, green 50%, transparent 50%, transparent 75%, pink 75%, pink 100%) 
+    background:
+      linear-gradient(45deg, transparent 25%, green 25%, green 50%, transparent 50%, transparent 75%, pink 75%, pink 100%)
       repeat-x;  /* Repeating the diamonds horizontally */
     background-size: 40px 40px; /* Adjust size of the diamond pattern */
   }
@@ -583,7 +609,7 @@ align-items: center;
     height: 50px;  /* Adjust based on your needs */
     background-color: white;
   }
-  
+
   .diamond-divider::after {
     position: absolute;
     left: -.5vw;
@@ -594,12 +620,12 @@ align-items: center;
     border-top: .7vw solid pink;
 
 
-    background: 
-      linear-gradient(45deg, transparent 25%, green 25%, green 50%, transparent 50%, transparent 75%, pink 75%, pink 100%) 
+    background:
+      linear-gradient(45deg, transparent 25%, green 25%, green 50%, transparent 50%, transparent 75%, pink 75%, pink 100%)
       repeat-x;  /* Repeating the diamonds horizontally */
     background-size: 20vw 20vw; /* Adjust size of the diamond pattern */
   }
-  
+
 
   /* fonts */
   .calistoga-regular {
@@ -614,8 +640,33 @@ align-items: center;
     font-style: normal;
   }
 
-  
-  
-  /*  */
-  
+  /* icons */
+
+  .fa {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  align-content: center;
+  margin: 5px 2px;
+  border-radius: 20%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+  /* icon */
+
 /* styles */
